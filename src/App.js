@@ -58,6 +58,17 @@ const App = () => {
         })
     }
   }
+
+  const validateForm = () => {
+    if (newAmmount === '' || newDate === '' || newName === '') {
+      alert('Input must not be empty')
+      return false
+    } else if (isNaN(Number(newAmmount)) || Number(newAmmount) <= 0) {
+      alert('Ammount must be a positive number')
+      return false
+    }
+    return true
+  }
   
   const handleFilterChange = (e) => {
     console.log('filter changed');
@@ -65,17 +76,18 @@ const App = () => {
   }
 
   const handleNameChange = (e) => {
-    console.log('name changed');
+    // console.log('name changed');
     setNewName(e.target.value)
   }
-
+  
   const handleAmmountChange = (e) => {
-    console.log('Amm changed');
+    // console.log('Amm changed');
     setNewAmmount(e.target.value)
   }
 
   const handleDateChange = (e) => {
-    console.log('Date changed', e.target.value);
+
+    // console.log('Date changed', e.target.value);
     setNewDate(e.target.value)
   }
 
@@ -94,22 +106,23 @@ const App = () => {
 
   const addExpense = (e) => {
     e.preventDefault()
-
-    console.log('new ex added');
-
-    const newEx = {
-      id: generateMaxId,
-      name: newName,
-      ammount: newAmmount,
-      date: newDate
+    if (validateForm()) {
+      console.log('new ex added');
+  
+      const newEx = {
+        id: generateMaxId,
+        name: newName,
+        ammount: newAmmount,
+        date: newDate
+      }
+  
+      expensesService
+        .create(newEx)
+        .then((returnedExpense) => {
+          setExpenses(expenses.concat(returnedExpense))
+          clearForm()
+        })
     }
-
-    expensesService
-      .create(newEx)
-      .then((returnedExpense) => {
-        setExpenses(expenses.concat(returnedExpense))
-        clearForm()
-      })
   }
   
   return (
