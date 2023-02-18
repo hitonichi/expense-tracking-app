@@ -1,0 +1,40 @@
+{
+  "expenses": [
+    {
+      "name": "Groceries",
+      "ammount": "15",
+      "date": "2023-05-23",
+      "id": 7
+    },
+    {
+      "name": "Food",
+      "ammount": "24",
+      "date": "2023-04-08",
+      "id": 8
+    },
+    {
+      "name": "Presents",
+      "ammount": "250",
+      "date": "2023-06-14",
+      "id": 9
+    },
+    {
+      "name": "Cat Food",
+      "ammount": "1200",
+      "date": "2021-01-01",
+      "id": 11
+    },
+    {
+      "name": "Eels",
+      "ammount": "400",
+      "date": "2022-07-01",
+      "id": 12
+    },
+    {
+      "name": "Mua cho nam dui cho",
+      "ammount": "350",
+      "date": "2023-04-01",
+      "id": 13
+    }
+  ]
+}

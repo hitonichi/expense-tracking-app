@@ -1,0 +1,22 @@
+{
+    "exspenses": [
+      {
+        "name": "Lottery",
+        "ammount": "11",
+        "date": "2023-02-06",
+        "id": 3
+      },
+      {
+        "name": "Shoes",
+        "ammount": "1313",
+        "date": "2023-02-09",
+        "id": 4
+      },
+      {
+        "name": "Beefsteak",
+        "ammount": "300",
+        "date": "2023-01-29",
+        "id": 5
+      }
+    ]
+  }
